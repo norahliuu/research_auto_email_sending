@@ -57,11 +57,9 @@ A Python-based clinical research data automation pipeline that cleans and valida
 
 ## Data Processing
 
-The pipeline first cleans raw participant data by standardizing fields such as phone numbers, consent values, survey status, and age.
+The Python pipeline first cleans raw participant data by standardizing fields such as phone numbers, consent values, survey status, and age.
 
-The cleaned data is then validated against predefined data quality rules. Records that fail validation are separated and exported to a data quality report for review.
-
-Only validated records are inserted into the SQLite participant database.
+The cleaned data is then validated. Both valid and invalid data are recorded in separate CSV files for future data report and data analysis. Valid data CSV will be used to select participant to follow up with in the future. Only validated records are inserted into the SQLite participant database. Only participant who gives consent for receiving follow up emails and has not yet completed the research survey will get reminder email. 
 
 ## Follow-Up Automation
 
