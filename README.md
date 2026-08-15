@@ -2,9 +2,8 @@
 
 A Python-based clinical research data automation pipeline that cleans and validates participant data, stores validated records in a SQLite database, identifies participants requiring follow-up using SQL, and generates automated personalized email reminders.
 
-This project was built to explore how Python and SQL can be used to reduce manual data processing and support reliable research data workflows.
+**Project Goal**: This project was built to help automate the data processing and email sending procedure in clinical research studies. It was built to explore how Python and SQL can be used to support reliable research data workflows.
 
-> **Project Goal**: Helping automating the processing of data processing and emailing sending workflow in clinical research studies. 
 > All participant data used in this project is synthetic. No real patient or clinical data is included.
 
 ## Features
