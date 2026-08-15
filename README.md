@@ -1,8 +1,8 @@
 # Clinical Research Data & Follow-Up Automation Engine
 
-A Python-based clinical research data automation pipeline that cleans and validates participant data, stores validated records in a SQLite database, identifies participants requiring follow-up using SQL, and generates automated personalized email reminders.
+In clinical reseaec studies, it is common to use survey to collect participants' or patients' feedback for future study and analysis. After data collection, it is necessary for research team to process data, filter out valid data and send reminder email to participant who has not yet completed the survey. 
 
-**Project Goal**: This project was built to help automate the data processing and email sending procedure in clinical research studies. It was built to explore how Python and SQL can be used to support reliable research data workflows.
+This is a Python-based clinical research data automation pipeline that **cleans and validates participant data, stores validated records in a SQLite database, identifies participants requiring follow-up using SQL, generates automated personalized email reminders and auto-deliver to participants**.
 
 > All participant data used in this project is synthetic. No real patient or clinical data is included.
 
@@ -25,12 +25,13 @@ A Python-based clinical research data automation pipeline that cleans and valida
 
 ## Skills and Technologies  
 
-- **Python**: built the main data processing body and email processing pipeline with python
+- **Python**: built the main data processing pipeline and email processing pipeline with python
 - **Pandas**: locate, clean, validate participant data using dataframe from pandas
 - **SQL**: wrote queries to identify participants with needs to send follow up emails to
 - **SQLite** — Built and maintained a participant database for validated research data
-- **SMTP**: generate personalized reminder emails and auto-send to participants
-- **REGEX**: validate and standardize email and phone number 
+- **SMTP**: generate personalized reminder emails and auto-send to participants who need follow-up. 
+- **Regex**: validate and standardize email and phone number 
+
 
 ## Project Structure
 
@@ -61,7 +62,7 @@ The Python pipeline first cleans raw participant data by standardizing fields su
 
 The cleaned data is then validated. Both valid and invalid data are recorded in separate CSV files for future data report and data analysis. Valid data CSV will be used to select participant to follow up with in the future. Only validated records are inserted into the SQLite participant database. Only participant who gives consent for receiving follow up emails and has not yet completed the research survey will get reminder email. 
 
-## Follow-Up Automation
+## Follow-Up Email Automation
 
 SQL queries identify participants who:
 
@@ -69,7 +70,7 @@ SQL queries identify participants who:
 - Have an incomplete survey
 - Have reached their scheduled follow-up date
 
-The system then generates a personalized reminder email for each eligible participant.
+The system then generates a personalized reminder email for each eligible participant (in src/reminder_emails.py)
 
 Email credentials are stored outside the source code using environment variables to avoid exposing sensitive authentication information.
 
