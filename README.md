@@ -4,54 +4,34 @@ A Python-based clinical research data automation pipeline that cleans and valida
 
 This project was built to explore how Python and SQL can be used to reduce manual data processing and support reliable research data workflows.
 
+> **Project Goal**: Helping automating the processing of data processing and emailing sending workflow in clinical research studies. 
 > All participant data used in this project is synthetic. No real patient or clinical data is included.
 
 ## Features
 
-- Imports synthetic participant data from CSV
+- Imports synthetic participant data from CSV file 
 - Cleans and standardizes participant information using pandas
-- Validates:
+- Validates values for:
   - Age
   - Email addresses
   - Phone numbers
   - Consent status
   - Survey completion status
-- Separates valid and invalid records
+- Separates valid and invalid records, store them in separate CSV fillers for future analysis 
 - Generates a data quality report for invalid records
 - Stores validated participants in a SQLite database
 - Uses SQL queries to identify participants requiring follow-up
 - Generates personalized survey reminder emails
 - Supports automated email delivery through SMTP
-- Stores email credentials securely using environment variables
 
-## Project Workflow
+## Skills and Technologies  
 
-    Synthetic Participant CSV
-                |
-                v
-         Data Cleaning
-                |
-                v
-        Data Validation
-           /         \
-          v           v
-    Valid Data    Invalid Data
-          |           |
-          v           v
-       SQLite    Quality Report
-          |
-          v
-      SQL Query
-          |
-          v
-    Participants Due
-      for Follow-Up
-          |
-          v
-    Email Generation
-          |
-          v
-      SMTP Delivery
+- **Python**: built the main data processing body and email processing pipeline with python
+- **Pandas**: locate, clean, validate participant data using dataframe from pandas
+- **SQL**: wrote queries to identify participants with needs to send follow up emails to
+- **SQLite** — Built and maintained a participant database for validated research data
+- **SMTP**: generate personalized reminder emails and auto-send to participants
+- **REGEX**: validate and standardize email and phone number 
 
 ## Project Structure
 
@@ -75,15 +55,6 @@ This project was built to explore how Python and SQL can be used to reduce manua
     |-- README.md
     |-- .gitignore
 
-## Technologies
-
-- Python
-- pandas
-- SQLite
-- SQL
-- SMTP
-- Python `email` library
-- Regular expressions (Regex)
 
 ## Data Processing
 
@@ -111,6 +82,7 @@ Install the required dependencies:
 
     pip install -r requirements.txt
 
+Choose the email address used to send emails to participant for reminder
 Set the required email environment variables:
 
     export SENDER_EMAIL="your_email@example.com"
