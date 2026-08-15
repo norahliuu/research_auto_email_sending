@@ -1,6 +1,6 @@
 # Clinical Research Data & Follow-Up Automation Engine
 
-In clinical reseaec studies, it is common to use survey to collect participants' or patients' feedback for future study and analysis. After data collection, it is necessary for research team to process data, filter out valid data and send reminder email to participant who has not yet completed the survey. 
+In clinical reseaech studies, it is common to use survey to collect participants' or patients' feedback for future study and analysis. After data collection, it is necessary for research team to process data, filter out valid data and send reminder email to participant who has not yet completed the survey. 
 
 This is a Python-based clinical research data automation pipeline that **cleans and validates participant data, stores validated records in a SQLite database, identifies participants requiring follow-up using SQL, generates automated personalized email reminders and auto-deliver to participants**.
 
