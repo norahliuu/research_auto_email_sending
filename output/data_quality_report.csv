@@ -1,0 +1,8 @@
+patient_id,name,age,email_address,phone_number,consent,survey_status,followup_date
+P022,Liam White,135,liam.white@example.com,6475550122,True,incomplete,2026-08-03
+P023,Mia Harris,39,mia.harris@example,4165550123,True,incomplete,2026-08-02
+P026,Alex Walker,33,alex.walker@example.com,12345,True,incomplete,2026-08-07
+P027,Chloe Hall,-5,chloe.hall@example.com,6475550127,False,complete,2026-08-20
+P028,Henry Young,68,,4165550128,True,complete,2026-08-22
+P029,Grace King,42,grace.king@example.com,,True,incomplete,2026-08-10
+P030,Lucas Green,49,lucas.green@example.com,4165550130,True,pending,2026-08-12
